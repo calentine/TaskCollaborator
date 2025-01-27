@@ -4,6 +4,7 @@ import { Server } from 'socket.io';
 
 const app = express();
 const httpServer = createServer(app);
+//not currently in use, I had planned to deploy it but I did not have time
 const io = new Server(httpServer, {
             cors:{
                 origin:'*',
