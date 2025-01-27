@@ -53,6 +53,7 @@ export default function TaskList() {
 
     return (
         <div className='task-container'>
+            Let's do some Tasks!
             <TaskInput addTask={addTask}/>
             <ul>
                 <DisplayTaskList tasks={tasks} />

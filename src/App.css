@@ -12,6 +12,7 @@
     justify-items: center;
 }
 .task-container{
+    margin-top: 5%;
     width:100%;
     max-width: 400px;
     justify-items: center;
