@@ -43,11 +43,12 @@ export default function TaskList() {
 
     const DisplayTaskList = ({ tasks }) => {
         return tasks.map((task) => (
+            // Task Component
             <Task 
                 key={task.id} 
                 task={task} 
                 toggleComplete={toggleComplete} 
-                deleteTask={deleteTask} /> // Use the Task component
+                deleteTask={deleteTask} /> 
         ));
     };
 

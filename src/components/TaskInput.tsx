@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 
+//Task input and prop to add tasks to Task List
 export default function TaskInput({addTask}) {
     const [taskValue, setTaskValue] = useState('');
     

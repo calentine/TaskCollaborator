@@ -11,6 +11,8 @@ const io = new Server(httpServer, {
             }
 });
 
+
+//in-memory Task list to broadcast to other connected users
 let sharedTasks = [];
 io.on('connection', socket =>{
     console.log('A user connected:', socket.id);
@@ -38,7 +40,7 @@ io.on('connection', socket =>{
         return task;
         })
 
-        // Emit the updated task list
+        // Emit the completed updated task list
         io.emit('taskList', sharedTasks);
         console.log('User:', socket.id);
         console.log('completed task:', completedTask);
