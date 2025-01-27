@@ -9,6 +9,10 @@ server:
     -node server.js
 frontend:
     -npm run dev
+    -Ctrl + click (http://localhost)
+
+**Add multiple users**
+    -Open multiple windows by Ctrl + clicking (http://localhost)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
