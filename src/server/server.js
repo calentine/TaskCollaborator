@@ -27,6 +27,25 @@ io.on('connection', socket =>{
         console.log('added task:', task);
     });
 
+    // Listen for 'completeTask' event
+    socket.on('completeTask', (taskId) => {
+    // Find the task and toggle its 'complete' status
+    const completedTask = sharedTasks.find((task)=> task.id === taskId);
+    sharedTasks = sharedTasks.map((task) => {
+        if (task.id === taskId) {
+            task.completed = !task.completed; // Toggle the completion status
+        }
+        return task;
+        })
+
+        // Emit the updated task list
+        io.emit('taskList', sharedTasks);
+        console.log('User:', socket.id);
+        console.log('completed task:', completedTask);
+    });
+    
+
+
     // deleting a task
     socket.on('deleteTask', (taskId)=> {
         const deletedTask = sharedTasks.find((task)=> task.id === taskId);
@@ -34,10 +53,12 @@ io.on('connection', socket =>{
 
         console.log('User:', socket.id);
         console.log('removed task:', deletedTask);
-        
+
         // Notifying all connected clients
         io.emit('taskList', sharedTasks);
     });
+
+    
 
     socket.on('disconnect', () =>{
         console.log('User disconnected:', socket.id);

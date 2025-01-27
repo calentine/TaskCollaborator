@@ -23,7 +23,7 @@ export default function TaskList() {
 
 
     const addTask = (taskName) => {
-        const newTask = {id: uuidv4(), name: taskName, complete: false};
+        const newTask = {id: uuidv4(), name: taskName, completed: false};
         setTasks([...tasks, newTask]);
         socket.emit('addTask', newTask);
     };
@@ -33,6 +33,7 @@ export default function TaskList() {
             tasks.map((task) =>
             task.id === id ?{...task, completed: !task.complete} : task)
         );
+        socket.emit('completeTask', id);
     };
     // This is going to only return the tasks !== id
     const deleteTask = (id) =>{
