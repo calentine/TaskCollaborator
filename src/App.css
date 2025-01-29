@@ -38,13 +38,16 @@
     height: fit-content;
     width:200px;
 }
+.task-list-title{
+    color: var(--dark_orange);
+}
 .task{
     display: flex;
     flex-direction:row;
     justify-content:space-between;
     align-items: center;
     height: fit-content;
-    width:200px;
+    width:275px;
     border: 1px;
     border-radius: 6px;
     border: 2px solid var(--light_orange);
@@ -54,7 +57,7 @@
 }
 button{
     padding: 2px;
-    margin-left: 2px;
+    margin-left: 6px;
     border-radius: 5px;
     background-color:var(--dark_orange);
     color: var(--light_yellow);

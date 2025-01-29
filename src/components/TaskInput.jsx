@@ -18,7 +18,7 @@ export default function TaskInput({addTask}) {
 return (
     <div className='input-container'>
         <input
-        className="border border-gray-500 rounded-md px-1 py-1 w-small focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="border border-gray-500 rounded-md px-1 py-1 w-small focus:outline-none focus:ring-2 focus:ring-orange-500"
         name='task input'
         type='text'
         placeholder='enter a task'
