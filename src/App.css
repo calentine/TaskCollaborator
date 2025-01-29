@@ -16,9 +16,11 @@
     font-family: Courier, monospace;
 }
 .page-header {
+    display: flex;
+    flex-direction: column;
     height:fit-content;
     width: 100%;
-    justify-items: center;
+    align-items: center;
     font-size:xx-large;
 }
 .task-container{
