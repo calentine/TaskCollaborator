@@ -1,27 +1,37 @@
 @import "tailwindcss";
 
+:root {
+    --dark_orange: #EB5A3C;
+    --light_orange: #DF9755;
+    --dark_yellow: #E7D283;
+    --light_yellow: #EDF4C2;
+}
 .page-layout {
     display: flex;
     flex-direction:column;
     align-items: center;
     min-height: 100vh;
+    background-color: var(--light_orange);
+    font-weight: bold;
+    font-family: Courier, monospace;
 }
 .page-header {
     height:fit-content;
     width: 100%;
     justify-items: center;
+    font-size:xx-large;
 }
 .task-container{
     margin-top: 5%;
+    padding-bottom: 4px;
     width:100%;
     max-width: 400px;
     justify-items: center;
-    border:1px;
+    border:1.5px solid var(--dark_orange);
     border-radius: 6px;
-    background-color: #C2E5FE;
+    background-color: var(--dark_yellow);
 }
 .input-container{
-    padding:10px;
     height: auto;
 }
 .task-list{
@@ -37,7 +47,16 @@
     width:200px;
     border: 1px;
     border-radius: 6px;
-    background-color:beige;
-    margin-bottom: 4px;
+    border: 2px solid var(--light_orange);
+    background-color:var(--light_yellow);
+    color: var(--dark_orange);
+    margin-top: 4px;
+}
+button{
+    padding: 2px;
+    margin-left: 2px;
+    border-radius: 5px;
+    background-color:var(--dark_orange);
+    color: var(--light_yellow);
 }
 

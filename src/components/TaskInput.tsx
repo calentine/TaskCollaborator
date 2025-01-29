@@ -25,7 +25,7 @@ return (
         onChange={handleInputChange}
         value={taskValue}
         />
-        <button className="bg-blue-400 text-white py-1 px-2 rounded" onClick={handleAddTask}>Add Task</button>
+        <button className='button' onClick={handleAddTask}>Add Task</button>
     </div>
   )
 }

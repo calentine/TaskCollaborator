@@ -8,7 +8,7 @@ export default function Task({ task, toggleComplete, deleteTask }) {
             <span onClick={()=>toggleComplete(task.id)}  className={task.completed ? "line-through" : ""}>{task.name}</span>
             <div>
                 <TrashIcon
-                    color={'gray'}
+                    color={'#EB5A3C'}
                     height={24}
                     width={24}
                     onClick={() => deleteTask(task.id)
