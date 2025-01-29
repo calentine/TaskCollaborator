@@ -27,9 +27,10 @@ Install dependencies
 
 **start app**
 server:
-    -node server.js
+    -cd src/server
+    -run with command: node server.js
 frontend:
-    -npm run dev
+    -run with command: npm run dev
     -Ctrl + click (http://localhost)
 
 **Add multiple users**
