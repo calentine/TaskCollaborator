@@ -65,3 +65,53 @@ button{
     color: var(--light_yellow);
 }
 
+/* Custom Modal Styles */
+.custom-overlay {
+    background: rgba(0, 0, 0, 0.7);  /* Dark background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.custom-modal {
+    background: var(--dark_yellow);
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--dark_orange);
+}
+
+.modal-message {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: var(--light_orange);
+}
+
+.modal-actions button {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-close-btn {
+    background-color: var(--dark_orange);
+    color: var(--light_yellow);
+}
+
+
+
